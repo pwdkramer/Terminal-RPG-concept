@@ -23,7 +23,7 @@ def print_menu():
 
     menu_input = input()
     while (menu_input != '1' and menu_input != '2' and menu_input != '3'):
-        print("Please enter the number 1, 2, or 3")
+        print("Please enter the number 1, 2, or 3:")
         menu_input = input()
 
     if menu_input == '1':
