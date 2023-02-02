@@ -26,4 +26,12 @@ def print_menu():
         print("Please enter the number 1, 2, or 3")
         menu_input = input()
 
-    return menu_input
+    if menu_input == '1':
+        #run character creator
+        print("go to character creator")
+    elif menu_input == '2':
+        #run user manual
+        print("go to user manual")
+    else:
+        print("Thanks for playing!")
+        quit()
