@@ -1,19 +1,26 @@
+from diceRoll import rollDice
+
 title = """
- __        __         _    _             
- \ \      / /__  _ __| | _(_)_ __   __ _ 
-  \ \ /\ / / _ \| '__| |/ / | '_ \ / _` |
-   \ V  V / (_) | |  |   <| | | | | (_| |
-  __\_/\_/_\___/|_|  |_|\_\_|_| |_|\__, |
- |_   _(_) |_| | ___               |___/ 
-   | | | | __| |/ _ \                    
-   | | | | |_| |  __/                    
-   |_| |_|\__|_|\___|                                                             
+  ____        _           _       ______ _          _   
+ |  _ \      | |         ( )     |  ____(_)        | |  
+ | |_) | __ _| |__  _   _|/ ___  | |__   _ _ __ ___| |_ 
+ |  _ < / _` | '_ \| | | | / __| |  __| | | '__/ __| __|
+ | |_) | (_| | |_) | |_| | \__ \ | |    | | |  \__ \ |_ 
+ |____/ \__,_|_.__/ \__, | |___/_|_|    |_|_|  |___/\__|
+     /\      | |     __/ |     | |                      
+    /  \   __| |_   |___/ _ __ | |_ _   _ _ __ ___      
+   / /\ \ / _` \ \ / / _ \ '_ \| __| | | | '__/ _ \     
+  / ____ \ (_| |\ V /  __/ | | | |_| |_| | | |  __/     
+ /_/    \_\__,_| \_/ \___|_| |_|\__|\__,_|_|  \___|     
+                                                        
+                                                                                    
 """
 
 options="""
 1 - Create a Character
 2 - View User Manual
-3 - Exit Game
+3 - Test Dice Roller
+4 - Exit Game
 """
 
 def print_menu():
@@ -22,7 +29,7 @@ def print_menu():
     print(options)
 
     menu_input = input()
-    while (menu_input != '1' and menu_input != '2' and menu_input != '3'):
+    while (menu_input != '1' and menu_input != '2' and menu_input != '3' and menu_input != '4'):
         print("Please enter the number 1, 2, or 3:")
         menu_input = input()
 
@@ -32,6 +39,12 @@ def print_menu():
     elif menu_input == '2':
         #run user manual
         print("go to user manual")
+    elif menu_input == '3':
+        #test dice roller
+        print("Simulate a dice roll. Enter [# of dice]d[# of sides on dice]. Example '2d6' rolls 2 6-sided dice.")
+        userDice = input()
+        print('You rolled a ',rollDice(userDice))
+        print_menu()
     else:
         print("Thanks for playing!")
         quit()
