@@ -1,4 +1,4 @@
-class Player:
+class Character:
     def __init__(self, hit_points, armor_class, strength, constitution, dexterity, intelligence, widsom, charisma):
         self.hit_points = hit_points
         self.armor_class = armor_class

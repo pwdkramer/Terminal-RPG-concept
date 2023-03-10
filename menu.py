@@ -1,4 +1,5 @@
 from diceRoll import rollDice
+from manual import print_manual
 
 title = """
   ____        _           _       ______ _          _   
@@ -30,7 +31,7 @@ def print_menu():
 
     menu_input = input()
     while (menu_input != '1' and menu_input != '2' and menu_input != '3' and menu_input != '4'):
-        print("Please enter the number 1, 2, or 3:")
+        print("Please enter a number listed in the options:")
         menu_input = input()
 
     if menu_input == '1':
@@ -38,13 +39,14 @@ def print_menu():
         print("go to character creator")
     elif menu_input == '2':
         #run user manual
-        print("go to user manual")
+        print_manual()
     elif menu_input == '3':
         #test dice roller
         print("Simulate a dice roll. Enter [# of dice]d[# of sides on dice]. Example '2d6' rolls 2 6-sided dice.")
         userDice = input()
         print('You rolled a ',rollDice(userDice))
-        print_menu()
     else:
         print("Thanks for playing!")
         quit()
+
+    print_menu()
