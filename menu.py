@@ -1,5 +1,6 @@
 from diceRoll import rollDice
 from manual import print_manual
+from creation import create_character
 
 title = """
   ____        _           _       ______ _          _   
@@ -36,7 +37,7 @@ def print_menu():
 
     if menu_input == '1':
         #run character creator
-        print("go to character creator")
+        create_character()
     elif menu_input == '2':
         #run user manual
         print_manual()
